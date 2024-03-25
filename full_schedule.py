@@ -46,7 +46,9 @@ class MainWindow(QMainWindow):
                 self.dict_widget[i + j * 3][0].move(125 + i * 400, 45 + j * 360)
                 self.dict_widget[i + j * 3][0].clicked.connect(self.open_day)
                 for n, el in enumerate(self.dict_widget[i + j * 3][1]):
+                    el[0].resize(50, 15)
                     el[0].move(100 + i * 400, 85 + j * 370 + 35 * n)
+                    el[1].resize(250, 15)
                     el[1].move(140 + i * 400, 85 + j * 370 + 35 * n)
         self.update_centr_aria()
 
